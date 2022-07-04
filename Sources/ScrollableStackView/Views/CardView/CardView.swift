@@ -37,11 +37,12 @@ class CardView: UIView {
     }
     
     private func loadViewFromNib() -> UIView {
-        let bundle = Bundle(for: type(of: self))
-        let nib = UINib(nibName: String(describing: type(of: self)), bundle: bundle)
-        let nibView = nib.instantiate(withOwner: self, options: nil).first as! UIView
-        
-        return nibView
+        return Bundle.module.loadNibNamed("CardView", owner: self, options: nil)![0] as! UIView
+//        let bundle = Bundle(for: type(of: self))
+//        let nib = UINib(nibName: String(describing: type(of: self)), bundle: bundle)
+//        let nibView = nib.instantiate(withOwner: self, options: nil).first as! UIView
+//
+//        return nibView
     }
     
     @IBInspectable
