@@ -12,12 +12,12 @@ open class ScrollableStackView: UIView {
     
     @IBOutlet weak var stackView: UIStackView!
     
-    open required init?(coder: NSCoder) {
+    public required init?(coder: NSCoder) {
         super.init(coder: coder)
         nibSetup()
     }
     
-    open override init(frame: CGRect) {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
     }
     
