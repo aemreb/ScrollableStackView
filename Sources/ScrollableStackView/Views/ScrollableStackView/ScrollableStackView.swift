@@ -12,12 +12,12 @@ open class ScrollableStackView: UIView {
     
     @IBOutlet weak var stackView: UIStackView!
     
-    required init?(coder: NSCoder) {
+    open required init?(coder: NSCoder) {
         super.init(coder: coder)
         nibSetup()
     }
     
-    override init(frame: CGRect) {
+    open override init(frame: CGRect) {
         super.init(frame: frame)
     }
     
@@ -41,7 +41,7 @@ open class ScrollableStackView: UIView {
         return nibView
     }
     
-    func addCardView(image: UIImage, title: String, memberCount: Int, privacy: Utilities.PrivacyState, detail: String) {
+    open func addCardView(image: UIImage, title: String, memberCount: Int, privacy: Utilities.PrivacyState, detail: String) {
         let cardView: CardView = CardView(frame: CGRect(x: 0.0, y: 0.0, width: 400.0, height: 250.0))
         cardView.titleText = title
         cardView.privacyState = privacy
@@ -54,7 +54,7 @@ open class ScrollableStackView: UIView {
         stackView.addArrangedSubview(cardView)
     }
     
-    func addCompactCardView(image: UIImage, title: String, memberCount: Int, privacy: Utilities.PrivacyState) {
+    open func addCompactCardView(image: UIImage, title: String, memberCount: Int, privacy: Utilities.PrivacyState) {
         let cardView: CompactCardView = CompactCardView(frame: CGRect(x: 0.0, y: 0.0, width: 400.0, height: 150.0))
         cardView.titleText = title
         cardView.privacyState = privacy
