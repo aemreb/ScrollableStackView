@@ -19,6 +19,7 @@ open class ScrollableStackView: UIView {
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
+        nibSetup()
     }
     
     private func nibSetup() {
