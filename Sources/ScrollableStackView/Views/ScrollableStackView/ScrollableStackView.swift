@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class ScrollableStackView: UIView {
+open class ScrollableStackView: UIView {
     
     @IBOutlet weak var stackView: UIStackView!
     
