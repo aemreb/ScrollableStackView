@@ -22,7 +22,7 @@ let package = Package(
         .target(
             name: "ScrollableStackView",
             dependencies: [],
-            resources: [.copy("Images"), .copy("Nibs")]),
+            resources: [.process("Images"), .process("Nibs")]),
         .testTarget(
             name: "ScrollableStackViewTests",
             dependencies: ["ScrollableStackView"]),
