@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Utilities {
+public struct Utilities {
     @objc public enum PrivacyState: Int, RawRepresentable {
         case priv
         case pub

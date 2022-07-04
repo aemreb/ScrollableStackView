@@ -41,7 +41,7 @@ open class ScrollableStackView: UIView {
         return nibView
     }
     
-    open func addCardView(image: UIImage, title: String, memberCount: Int, privacy: Utilities.PrivacyState, detail: String) {
+    public func addCardView(image: UIImage, title: String, memberCount: Int, privacy: Utilities.PrivacyState, detail: String) {
         let cardView: CardView = CardView(frame: CGRect(x: 0.0, y: 0.0, width: 400.0, height: 250.0))
         cardView.titleText = title
         cardView.privacyState = privacy
@@ -54,7 +54,7 @@ open class ScrollableStackView: UIView {
         stackView.addArrangedSubview(cardView)
     }
     
-    open func addCompactCardView(image: UIImage, title: String, memberCount: Int, privacy: Utilities.PrivacyState) {
+    public func addCompactCardView(image: UIImage, title: String, memberCount: Int, privacy: Utilities.PrivacyState) {
         let cardView: CompactCardView = CompactCardView(frame: CGRect(x: 0.0, y: 0.0, width: 400.0, height: 150.0))
         cardView.titleText = title
         cardView.privacyState = privacy
